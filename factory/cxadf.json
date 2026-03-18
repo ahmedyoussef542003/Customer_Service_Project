@@ -1,0 +1,9 @@
+{
+	"name": "cxadf",
+	"location": "uaenorth",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "68bc8a11-07c1-4de2-ae38-48077ed0fab8",
+		"tenantId": "e95b832e-aa93-4efc-8885-a951233dc69d"
+	}
+}
