@@ -8,10 +8,10 @@
 		"annotations": [],
 		"type": "Excel",
 		"typeProperties": {
-			"sheetName": "fTable",
+			"sheetName": "Dim_Date",
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "fTable.xlsx",
+				"fileName": "Dim_Date.xlsx",
 				"fileSystem": "bronze"
 			},
 			"firstRowAsHeader": true
