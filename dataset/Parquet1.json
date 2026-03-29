@@ -1,0 +1,56 @@
+{
+	"name": "Parquet1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "silver"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": [
+			{
+				"name": "Customer_ID",
+				"type": "INT32"
+			},
+			{
+				"name": "Customer_Name",
+				"type": "UTF8"
+			},
+			{
+				"name": "Gender",
+				"type": "UTF8"
+			},
+			{
+				"name": "Age",
+				"type": "INT32"
+			},
+			{
+				"name": "Customer_Segment",
+				"type": "UTF8"
+			},
+			{
+				"name": "Loyalty_Level",
+				"type": "UTF8"
+			},
+			{
+				"name": "New_Country",
+				"type": "UTF8"
+			},
+			{
+				"name": "New_City",
+				"type": "UTF8"
+			},
+			{
+				"name": "Join_Date",
+				"type": "UTF8"
+			}
+		]
+	}
+}

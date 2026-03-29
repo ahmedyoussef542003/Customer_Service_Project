@@ -1,0 +1,101 @@
+{
+	"name": "Excel1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "501issue.xlsx",
+				"fileSystem": "bronze"
+			},
+			"firstRowAsHeader": true
+		},
+		"schema": [
+			{
+				"name": "Ticket_ID",
+				"type": "String"
+			},
+			{
+				"name": "Date_Key",
+				"type": "String"
+			},
+			{
+				"name": "Agent_ID",
+				"type": "String"
+			},
+			{
+				"name": "Customer_ID",
+				"type": "String"
+			},
+			{
+				"name": "Channel_ID",
+				"type": "String"
+			},
+			{
+				"name": "Department_ID",
+				"type": "String"
+			},
+			{
+				"name": "Issue_Type_ID",
+				"type": "String"
+			},
+			{
+				"name": "Status_ID",
+				"type": "String"
+			},
+			{
+				"name": "Shift_ID",
+				"type": "String"
+			},
+			{
+				"name": "Satisfaction_ID",
+				"type": "String"
+			},
+			{
+				"name": "First_Response_Time",
+				"type": "String"
+			},
+			{
+				"name": "Handle_Time",
+				"type": "String"
+			},
+			{
+				"name": "Resolution_Time",
+				"type": "String"
+			},
+			{
+				"name": "First_Call_Resolution",
+				"type": "String"
+			},
+			{
+				"name": "Escalation_Flag",
+				"type": "String"
+			},
+			{
+				"name": "Transfer_Count",
+				"type": "String"
+			},
+			{
+				"name": "Reopen_Count",
+				"type": "String"
+			},
+			{
+				"name": "SLA_Breached",
+				"type": "String"
+			},
+			{
+				"name": "Agent_Utilization",
+				"type": "String"
+			},
+			{
+				"name": "Occupancy_Rate",
+				"type": "String"
+			}
+		]
+	}
+}

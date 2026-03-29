@@ -1,0 +1,62 @@
+{
+	"name": "dataflow1",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "Excel1",
+						"type": "DatasetReference"
+					},
+					"name": "date"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "Parquet1",
+						"type": "DatasetReference"
+					},
+					"name": "sink1"
+				}
+			],
+			"transformations": [],
+			"scriptLines": [
+				"source(output(",
+				"          Date_Key as short,",
+				"          Full_Date as date,",
+				"          Day as short,",
+				"          Month_Number as short,",
+				"          Month_Name as string,",
+				"          Quarter as short,",
+				"          Year as short,",
+				"          Weekday as string,",
+				"          Is_Weekend as boolean",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> date",
+				"date sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     input(",
+				"          Customer_ID as integer,",
+				"          Customer_Name as string,",
+				"          Gender as string,",
+				"          Age as integer,",
+				"          Customer_Segment as string,",
+				"          Loyalty_Level as string,",
+				"          New_Country as string,",
+				"          New_City as string,",
+				"          Join_Date as string",
+				"     ),",
+				"     format: 'parquet',",
+				"     umask: 0022,",
+				"     preCommands: [],",
+				"     postCommands: [],",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> sink1"
+			]
+		}
+	}
+}
