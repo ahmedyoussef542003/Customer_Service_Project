@@ -8,10 +8,9 @@
 		"annotations": [],
 		"type": "Excel",
 		"typeProperties": {
-			"sheetName": "Dim_Date",
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "Dim_Date.xlsx",
+				"fileName": "501issue.xlsx",
 				"fileSystem": "bronze"
 			},
 			"firstRowAsHeader": true
