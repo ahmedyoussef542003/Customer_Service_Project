@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "Department",
+				"fileName": "Shift",
 				"fileSystem": "silver"
 			},
 			"compressionCodec": "snappy"

@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "Statu_Dim1.csv",
+				"fileName": "Shift_Dim_2.csv",
 				"fileSystem": "bronze"
 			},
 			"columnDelimiter": ",",
