@@ -3,10 +3,8 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Channel",
+				"name": "Department",
 				"type": "Copy",
-				"state": "Inactive",
-				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
@@ -18,14 +16,11 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "DelimitedTextSource",
+						"type": "ExcelSource",
 						"storeSettings": {
 							"type": "AzureBlobFSReadSettings",
 							"recursive": true,
 							"enablePartitionDiscovery": false
-						},
-						"formatSettings": {
-							"type": "DelimitedTextReadSettings"
 						}
 					},
 					"sink": {
@@ -49,7 +44,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "Csv",
+						"referenceName": "Excel1",
 						"type": "DatasetReference"
 					}
 				],
@@ -63,6 +58,8 @@
 			{
 				"name": "Csv Pipeline",
 				"type": "Copy",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
