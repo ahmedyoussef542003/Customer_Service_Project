@@ -1,0 +1,40 @@
+{
+	"name": "Csv",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "Shift_Dim_2.csv",
+				"fileSystem": "bronze"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Shift_ID",
+				"type": "String"
+			},
+			{
+				"name": "Shift_Name",
+				"type": "String"
+			},
+			{
+				"name": "Shift_Start",
+				"type": "String"
+			},
+			{
+				"name": "Shift_End",
+				"type": "String"
+			}
+		]
+	}
+}
