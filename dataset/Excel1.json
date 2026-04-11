@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "501issue.xlsx",
+				"fileName": "New_Channel (1).xlsx",
 				"fileSystem": "bronze"
 			},
 			"firstRowAsHeader": true
