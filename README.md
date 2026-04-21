@@ -83,9 +83,9 @@ The core of **SynapSupport** lies in its ability to decouple data storage from c
 ## 👥 Meet the Team
 * **Ahmed Youssef** ([@ahmedyoussef542003](https://github.com/ahmedyoussef542003))
 * **Mahmoud Mamdouh** ([@Mahmooo0od](https://github.com/Mahmooo0od))
-* **Mohammed Asim** ([@mohammedasim4040-eng](https://github.com/mohammedasim4040-eng))
+* **Mohammed Asem** ([@mohammedasim4040-eng](https://github.com/mohammedasim4040-eng))
 * **Ashraf Saber** ([@ashrafsaber726](https://github.com/ashrafsaber726))
-* **M. Yasser** ([@myassercom400-uz](https://github.com/myassercom400-uz))
+* **Yasser Teleba** ([@myassercom400-uz](https://github.com/myassercom400-uz))
 
 ---
 <p align="center"><i>End-to-End Data Engineering Portfolio Project - 2026</i></p>
