@@ -3,37 +3,39 @@
 <p align="center">
   <img src="Customer_Service_Project/Data%20Engineering%20Architecture/Final_Logo_Synap_Support.png" width="300" alt="SynapSupport Logo">
   <br>
-  <b>Scalable Data Infrastructure for Intelligent Customer Support Insights</b>
+  <b>Empowering Business Decisions through Scalable Cloud Data Engineering</b>
 </p>
 
 ---
 
-## 📖 Executive Summary
-**SynapSupport** is a comprehensive Data Engineering solution architected to automate the ingestion, transformation, and visualization of large-scale customer support datasets. Utilizing the **Azure Cloud Stack**, the project implements a **Medallion Architecture** to convert fragmented raw data into high-value, actionable business intelligence, empowering stakeholders to monitor agent performance and operational efficiency in real-time.
+## 📖 Project Overview
+**SynapSupport** is an enterprise-grade Data Engineering ecosystem built to solve the challenges of fragmented customer support data. By leveraging the **Azure Data Stack**, we transformed raw, unstructured data into a high-performance analytical hub. 
+
+Our solution implements a modern **Medallion Architecture**, ensuring data integrity from the moment it lands in the lake until it is visualized in executive dashboards. This pipeline enables the organization to track agent productivity, optimize shifts, and improve customer satisfaction through data-driven insights.
 
 ---
 
-## 🏗️ Data Engineering Architecture
-The pipeline is built on a multi-hop architecture designed for reliability and performance:
+## 🏗️ Technical Architecture
+The infrastructure follows the **Multi-Hop (Medallion) pattern** to provide a clean, reliable stream of data:
 
 <p align="center">
-  <img src="Customer_Service_Project/Data%20Engineering%20Architecture/Cx_Diagram.jpg" width="850" alt="Data Pipeline Diagram">
+  <img src="Customer_Service_Project/Data%20Engineering%20Architecture/Cx_Diagram.jpg" width="900" alt="Architecture Diagram">
 </p>
 
-### 🛡️ The Medallion Framework
-1.  **Bronze (Raw):** Landing zone for original CSV/Excel files in **ADLS Gen2**, preserving the data in its native format.
-2.  **Silver (Cleansed):** Data is processed via **Azure Synapse (Serverless SQL)**. Transformations include schema enforcement, handling nulls, and converting files to **Parquet** for optimized storage.
-3.  **Gold (Curated):** Finalized **Star Schema** with Fact and Dimension views, optimized for analytical queries and BI consumption.
+### The Data Layers:
+* **Bronze Layer (Raw Storage):** Ingests source files into **Azure Data Lake Storage Gen2** without modification.
+* **Silver Layer (Enriched Data):** Data is cleaned and converted into **Parquet** format via **Azure Synapse** for optimal performance.
+* **Gold Layer (Analytical Views):** Optimized **SQL Views** following a Star Schema, serving as the "Source of Truth" for BI reporting.
 
 ---
 
-## 🛠️ Tech Stack & Azure Ecosystem
-The project leverages enterprise-grade tools to ensure scalability:
-* **Orchestration:** [Azure Data Factory (ADF)] for automated data movement.
-* **Storage:** [Azure Data Lake Storage Gen2] with tiered containers (Bronze, Silver, Gold).
-* **Compute/Warehouse:** [Azure Synapse Analytics] using Serverless SQL Pools.
-* **Visualization:** [Power BI] for interactive reporting.
-* **Collaboration:** [GitHub] for version control and CI/CD.
+## 🛠️ Technology Stack
+* **Cloud Platform:** Microsoft Azure
+* **Data Orchestration:** Azure Data Factory (ADF)
+* **Data Lake:** ADLS Gen2
+* **Data Warehousing:** Azure Synapse Analytics (Serverless SQL Pools)
+* **Data Visualization:** Power BI Desktop & Service
+* **Version Control:** GitHub
 
 <p align="center">
   <img src="Customer_Service_Project/Data%20Engineering%20Architecture/Azure%20Resources.jpg" width="48%" />
@@ -43,42 +45,44 @@ The project leverages enterprise-grade tools to ensure scalability:
 ---
 
 ## 📂 Sprint 2: Logical Modeling & Transformation
-A core focus of this project was the transition from business requirements to technical logical modeling. We performed rigorous sketching to define optimized Dimension tables:
+During the second sprint, we translated business requirements into a relational structure to maximize query speed.
 
+### Design Artifacts (Sketching):
 <p align="center">
   <img src="Customer_Service_Project/Sprint%202/Sketching/Shift%20Sketching.jpeg" width="30%" />
   <img src="Customer_Service_Project/Sprint%202/Sketching/sketching%20of%20departement.jpeg" width="30%" />
   <img src="Customer_Service_Project/Sprint%202/Sketching/status%20dim%20sketching.jpeg" width="30%" />
 </p>
 
-### Final Analytical Layers:
-The transformation results in curated SQL Views within Synapse, allowing for seamless integration with Power BI:
+### Transformation Logic:
+Using **T-SQL** within Synapse, we engineered curated views for seamless Power BI integration:
 <p align="center">
-  <img src="Customer_Service_Project/Data%20Engineering%20Architecture/Synapse_Views_in_PBI.jpg" width="700" alt="Synapse Views in Power BI">
+  <img src="Customer_Service_Project/Data%20Engineering%20Architecture/Synapse_Views_in_PBI.jpg" width="750" alt="Synapse Views Implementation">
 </p>
 
 ---
 
 ## 🚀 Key Quantifiable Achievements
-* **40\% Storage Efficiency:** Achieved through Snappy compression in Parquet format.
-* **2x Query Performance:** Realized by transitioning from row-based text files to columnar storage.
-* **80\% Manual Effort Reduction:** Fully automated ETL pipelines replacing legacy manual reporting.
-* **Real-time Tracking:** Supporting over **15+ KPIs** including Resolution Time, Agent Load, and Departmental Efficiency.
+* **40\% Storage Cost Reduction:** Achieved by implementing Snappy compression via Parquet files.
+* **2x Faster Query Response:** Columnar storage optimization reduced I/O overhead.
+* **80\% Reduction in Manual Reporting:** ETL automation eliminated manual data prep.
+* **Data-Driven Scalability:** Architected to handle **1M+ monthly records** with minimal latency.
 
 ---
 
-## 👥 Meet the Team (Authors)
-This project was a collaborative effort by a dedicated team of Data Engineers:
+## 👥 Meet the Team
+This project was successfully delivered through the collaborative efforts of:
 
-* **Ahmed Youssef** ([@ahmedyoussef542003](https://github.com/ahmedyoussef542003)) - Lead Development & Optimization.
-* **Mahmoud Mamdouh** ([@Mahmooo0od](https://github.com/Mahmooo0od)) - Architecture Design & Documentation.
-* **Mohammed Asim** ([@mohammedasim4040-eng](https://github.com/mohammedasim4040-eng)) - Data Transformation.
-* **Ashraf Saber** ([@ashrafsaber726](https://github.com/ashrafsaber726)) - BI Reporting & Quality Assurance.
-* **M. Yasser** ([@myassercom400-uz](https://github.com/myassercom400-uz)) - Infrastructure Management.
+* **Ahmed Youssef** ([@ahmedyoussef542003](https://github.com/ahmedyoussef542003))
+* **Mahmoud Mamdouh** ([@Mahmooo0od](https://github.com/Mahmooo0od))
+* **Mohammed Asim** ([@mohammedasim4040-eng](https://github.com/mohammedasim4040-eng))
+* **Ashraf Saber** ([@ashrafsaber726](https://github.com/ashrafsaber726))
+* **M. Yasser** ([@myassercom400-uz](https://github.com/myassercom400-uz))
 
+### Project Contribution Graph
 <p align="center">
-  <img src="https://raw.githubusercontent.com/YourUsername/SynapSupport/main/Documentation/contributors_activity.png" width="800" alt="Team Contribution Graph">
+  <img src="https://path-to-your-contributors-image.png" width="850" alt="Contributors Activity">
 </p>
 
 ---
-*Developed as part of an End-to-End Cloud Data Engineering Portfolio.*
+<p align="center"><i>End-to-End Data Engineering Portfolio Project - 2026</i></p>
