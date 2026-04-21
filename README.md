@@ -1,7 +1,7 @@
 # 📊 SynapSupport: End-to-End Customer Analytics Cloud Pipeline
 
 <p align="center">
-  <img src="Customer_Service_Project/Data%20Engineering%20Architecture/Final_Logo_Synap_Support.png" width="300" alt="SynapSupport Logo">
+  <img src="Data Engineering Architecture/Final_Logo_Synap_Support.png" width="300" alt="SynapSupport Logo">
   <br>
   <b>Empowering Business Decisions through Scalable Cloud Data Engineering</b>
 </p>
