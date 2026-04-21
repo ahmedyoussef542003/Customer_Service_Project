@@ -64,6 +64,21 @@ The final SQL Views were engineered to track **15+ Critical KPIs**, including:
 * **Scalability:** Architected to handle **1M+ records** with no performance degradation.
 
 ---
+## 🏛️ High-Level Architectural Strategy
+The core of **SynapSupport** lies in its ability to decouple data storage from compute power. By utilizing the **Medallion Framework**, we ensure that data is progressively refined, moving from a chaotic "Raw" state to a highly structured "Business-Ready" state.
+
+<p align="center">
+  <img src="Data Engineering Architecture/1st_Page_Synap_Support.jpg" width="900" alt="SynapSupport Architecture Overview">
+  <br>
+  <i>Figure 1: Comprehensive End-to-End Azure Data Pipeline Architecture</i>
+</p>
+
+### Key Strategic Benefits:
+* **Data Reliability:** We maintain a "Single Source of Truth" in the Bronze layer for auditing and reprocessing.
+* **Cost Optimization:** Using **Parquet** files and **Serverless SQL** ensures we only pay for the data we query.
+* **Scalability:** The pipeline is elastic, designed to handle sudden spikes in ticket volumes (1M+ records) without manual intervention.
+
+---
 
 ## 👥 Meet the Team
 * **Ahmed Youssef** ([@ahmedyoussef542003](https://github.com/ahmedyoussef542003))
