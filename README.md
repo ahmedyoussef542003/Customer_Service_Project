@@ -9,7 +9,7 @@
 ---
 
 ## 🏗️ Technical Architecture
-The infrastructure follows the **Multi-Hop (Medallion) pattern**:
+The infrastructure follows the **Multi-Hop (Medallion) pattern** to ensure data integrity and high performance:
 
 <p align="center">
   <img src="Data%20Engineering%20Architecture/Cx_Diagram.jpg" width="900" alt="Architecture Diagram">
@@ -26,10 +26,19 @@ The infrastructure follows the **Multi-Hop (Medallion) pattern**:
 ---
 
 ## 📂 Sprint Transformation & Modeling
-During the project, we translated business requirements into a relational structure.
+In this stage, we focused on translating business requirements into a robust relational schema.
+
+### 📝 Logical Design (Sketching):
+We performed manual sketching to architect the Dimension tables, ensuring they meet the analytical needs of the stakeholders:
+
+<p align="center">
+  <img src="Sprint%202/Sketching/Shift%20Sketching.jpeg" width="30%" />
+  <img src="Sprint%202/Sketching/sketching%20of%20departement.jpeg" width="30%" />
+  <img src="Sprint%202/Sketching/status%20dim%20sketching.jpeg" width="30%" />
+</p>
 
 ### ⚙️ Data Processing:
-We leveraged **Azure Synapse** for heavy lifting and data cleansing:
+We leveraged **Azure Synapse** for heavy lifting, data cleansing, and optimization:
 <p align="center">
   <img src="Data%20Engineering%20Architecture/Azure%20Synapse.jpg" width="80%" />
 </p>
