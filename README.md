@@ -1,87 +1,84 @@
-# 📊 SynapSupport: End-to-End Customer Analytics Pipeline (Azure Cloud)
+# 📊 SynapSupport: End-to-End Customer Analytics Cloud Pipeline
 
 <p align="center">
-  <img src="https://github.com/YOUR_USERNAME/SynapSupport/raw/main/Documentation/logo.png" width="250" alt="SynapSupport Logo">
+  <img src="Customer_Service_Project/Data%20Engineering%20Architecture/Final_Logo_Synap_Support.png" width="300" alt="SynapSupport Logo">
   <br>
-  <b>Building a Scalable, Cloud-Native Intelligence Hub for Modern Customer Care</b>
+  <b>Scalable Data Infrastructure for Intelligent Customer Support Insights</b>
 </p>
 
 ---
 
-## 📖 Project Overview
-
-**SynapSupport** هو مشروع متكامل لهندسة البيانات (Data Engineering) يهدف إلى أتمتة عملية سحب، تنظيف، وتحليل بيانات خدمة العملاء. يعتمد المشروع على **Azure Cloud Ecosystem** وبتطبيق منهجية **Medallion Architecture** لتحويل البيانات الخام إلى رؤى ذكية (Insights) تدعم صناعة القرار.
-
-يوفر هذا النظام للإدارة القدرة على مراقبة أداء الموظفين، سرعة الاستجابة، وتوزيع ضغط العمل (Workload) بشكل لحظي، مما يساهم في تحسين جودة الخدمة وتقليل التكاليف التشغيلية.
+## 📖 Executive Summary
+**SynapSupport** is a comprehensive Data Engineering solution architected to automate the ingestion, transformation, and visualization of large-scale customer support datasets. Utilizing the **Azure Cloud Stack**, the project implements a **Medallion Architecture** to convert fragmented raw data into high-value, actionable business intelligence, empowering stakeholders to monitor agent performance and operational efficiency in real-time.
 
 ---
 
-## 🏗️ Architecture & Data Workflow
-
-يعتمد المشروع على تصميم هندسي قوي يضمن الـ Scalability والـ Data Integrity:
+## 🏗️ Data Engineering Architecture
+The pipeline is built on a multi-hop architecture designed for reliability and performance:
 
 <p align="center">
-  <img src="https://github.com/YOUR_USERNAME/SynapSupport/raw/main/Documentation/architecture_diagram.png" width="850" alt="Architecture Diagram">
+  <img src="Customer_Service_Project/Data%20Engineering%20Architecture/Cx_Diagram.jpg" width="850" alt="Data Pipeline Diagram">
 </p>
 
-### 🛡️ Medallion Framework (Multi-Hop Architecture)
-1.  **Bronze Layer (Raw):** يتم استقبال البيانات بصيغتها الأصلية (CSV, Excel) وحفظها في **Azure Data Lake (ADLS Gen2)** لضمان وجود نسخة "Single Source of Truth".
-2.  **Silver Layer (Cleansed):** يتم استخدام **Azure Synapse (Serverless SQL)** لتحويل البيانات إلى صيغة **Parquet**. في هذه المرحلة يتم معالجة القيم المفقودة (Nulls)، توحيد أنواع البيانات، وضمان جودة الـ Schema.
-3.  **Gold Layer (Curated):** إنشاء **Star Schema** تتكون من جداول الحقائق والابعاد (Fact & Dimensions) عبر SQL Views، لتكون جاهزة للتحليل المباشر.
+### 🛡️ The Medallion Framework
+1.  **Bronze (Raw):** Landing zone for original CSV/Excel files in **ADLS Gen2**, preserving the data in its native format.
+2.  **Silver (Cleansed):** Data is processed via **Azure Synapse (Serverless SQL)**. Transformations include schema enforcement, handling nulls, and converting files to **Parquet** for optimized storage.
+3.  **Gold (Curated):** Finalized **Star Schema** with Fact and Dimension views, optimized for analytical queries and BI consumption.
 
 ---
 
-## 🛠️ Tech Stack & Cloud Resources
-
-* **Orchestration:** [Azure Data Factory (ADF)](https://azure.microsoft.com/en-us/products/data-factory) لجدولة الـ Pipelines وإدارة حركة البيانات.
-* **Storage:** [Azure Data Lake Storage Gen2](https://azure.microsoft.com/en-us/products/storage/data-lake-storage) لتخزين البيانات بكافة مراحلها.
-* **Data Warehouse:** [Azure Synapse Analytics](https://azure.microsoft.com/en-us/products/synapse-analytics) (Serverless SQL Pools) لمعالجة البيانات الضخمة بتكلفة منخفضة.
-* **Visualization:** [Power BI](https://powerbi.microsoft.com/) لإنشاء الـ Dashboards التفاعلية.
-* **Version Control:** [GitHub](https://github.com/) لإدارة الكود والـ CI/CD.
-
----
-
-## 📂 Sprint 2: Data Modeling & Business Logic
-
-في هذه المرحلة، تم تحويل المتطلبات الإدارية إلى تصميم تقني. تم عمل **Sketching** للجداول الأساسية لضمان أفضل أداء للاستعلامات:
+## 🛠️ Tech Stack & Azure Ecosystem
+The project leverages enterprise-grade tools to ensure scalability:
+* **Orchestration:** [Azure Data Factory (ADF)] for automated data movement.
+* **Storage:** [Azure Data Lake Storage Gen2] with tiered containers (Bronze, Silver, Gold).
+* **Compute/Warehouse:** [Azure Synapse Analytics] using Serverless SQL Pools.
+* **Visualization:** [Power BI] for interactive reporting.
+* **Collaboration:** [GitHub] for version control and CI/CD.
 
 <p align="center">
-  <img src="https://github.com/YOUR_USERNAME/SynapSupport/raw/main/Documentation/shift_sketch.jpeg" width="30%" alt="Shift Table Sketch"> 
-  <img src="https://github.com/YOUR_USERNAME/SynapSupport/raw/main/Documentation/department_sketch.jpeg" width="30%" alt="Department Table Sketch">
-  <img src="https://github.com/YOUR_USERNAME/SynapSupport/raw/main/Documentation/status_sketch.jpeg" width="30%" alt="Status Table Sketch">
+  <img src="Customer_Service_Project/Data%20Engineering%20Architecture/Azure%20Resources.jpg" width="48%" />
+  <img src="Customer_Service_Project/Data%20Engineering%20Architecture/Data_Lake_Containers.jpg" width="48%" />
 </p>
 
-### Key Dimensions Modeled:
-* **Dim_Shift:** لتحليل الأداء بناءً على فترات العمل المختلفة.
-* **Dim_Department:** لتوزيع ضغط العمل بين الأقسام التقنية والإدارية.
-* **Dim_Status:** لمراقبة حالات التذاكر (Open, Closed, Pending).
+---
+
+## 📂 Sprint 2: Logical Modeling & Transformation
+A core focus of this project was the transition from business requirements to technical logical modeling. We performed rigorous sketching to define optimized Dimension tables:
+
+<p align="center">
+  <img src="Customer_Service_Project/Sprint%202/Sketching/Shift%20Sketching.jpeg" width="30%" />
+  <img src="Customer_Service_Project/Sprint%202/Sketching/sketching%20of%20departement.jpeg" width="30%" />
+  <img src="Customer_Service_Project/Sprint%202/Sketching/status%20dim%20sketching.jpeg" width="30%" />
+</p>
+
+### Final Analytical Layers:
+The transformation results in curated SQL Views within Synapse, allowing for seamless integration with Power BI:
+<p align="center">
+  <img src="Customer_Service_Project/Data%20Engineering%20Architecture/Synapse_Views_in_PBI.jpg" width="700" alt="Synapse Views in Power BI">
+</p>
 
 ---
 
-## 🚀 Quantifiable Achievements (Business Impact)
-
-* **Storage Optimization:** بفضل التحويل لصيغة **Parquet**، تم تقليل مساحة التخزين بنسبة **40\%**.
-* **Query Performance:** تحسن أداء الاستعلامات بمعدل **2x** مقارنة بالتعامل مع الملفات النصية الخام.
-* **Cost Efficiency:** استخدام الـ **Serverless Architecture** ساهم في تقليل تكاليف الحوسبة بشكل كبير (Pay-per-query).
-* **Decision Speed:** تقليل الوقت المستغرق في إعداد التقارير اليدوية بنسبة **80\%**، حيث أصبحت البيانات تتدفق بشكل آلي للـ Dashboard.
-
----
-
-## 📈 Final Visualization (Power BI)
-
-الـ Dashboard النهائية تمكن الـ Stakeholders من مراقبة:
-* متوسط وقت الاستجابة (Average Response Time).
-* أداء الموظفين (Agent Performance Score).
-* توزيع التذاكر حسب القسم والحالة.
+## 🚀 Key Quantifiable Achievements
+* **40\% Storage Efficiency:** Achieved through Snappy compression in Parquet format.
+* **2x Query Performance:** Realized by transitioning from row-based text files to columnar storage.
+* **80\% Manual Effort Reduction:** Fully automated ETL pipelines replacing legacy manual reporting.
+* **Real-time Tracking:** Supporting over **15+ KPIs** including Resolution Time, Agent Load, and Departmental Efficiency.
 
 ---
 
-## 👤 Author
+## 👥 Meet the Team (Authors)
+This project was a collaborative effort by a dedicated team of Data Engineers:
 
-**Mahmoud Mamdouh**
-*Data & Analytics Engineer*
-* [LinkedIn Profile](YOUR_LINKEDIN_URL)
-* [Portfolio](YOUR_PORTFOLIO_URL)
+* **Ahmed Youssef** ([@ahmedyoussef542003](https://github.com/ahmedyoussef542003)) - Lead Development & Optimization.
+* **Mahmoud Mamdouh** ([@Mahmooo0od](https://github.com/Mahmooo0od)) - Architecture Design & Documentation.
+* **Mohammed Asim** ([@mohammedasim4040-eng](https://github.com/mohammedasim4040-eng)) - Data Transformation.
+* **Ashraf Saber** ([@ashrafsaber726](https://github.com/ashrafsaber726)) - BI Reporting & Quality Assurance.
+* **M. Yasser** ([@myassercom400-uz](https://github.com/myassercom400-uz)) - Infrastructure Management.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/YourUsername/SynapSupport/main/Documentation/contributors_activity.png" width="800" alt="Team Contribution Graph">
+</p>
 
 ---
-*Note: This project was developed as part of a comprehensive Cloud Data Engineering roadmap to demonstrate expertise in Azure Data Stack.*
+*Developed as part of an End-to-End Cloud Data Engineering Portfolio.*
