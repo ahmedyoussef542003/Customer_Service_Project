@@ -18,6 +18,7 @@ The infrastructure follows the **Multi-Hop (Medallion) pattern** to ensure data 
 ---
 
 ## 🛠️ Technology Stack & Resources
+Detailed view of the Azure environment and storage hierarchy:
 <p align="center">
   <img src="Data%20Engineering%20Architecture/Azure%20Resources.jpg" width="48%" />
   <img src="Data%20Engineering%20Architecture/Data_Lake_Containers.jpg" width="48%" />
@@ -25,16 +26,16 @@ The infrastructure follows the **Multi-Hop (Medallion) pattern** to ensure data 
 
 ---
 
-## 📂 Sprint Transformation & Modeling
+## 📂 Sprint 2: Logical Modeling & Transformation
 In this stage, we focused on translating business requirements into a robust relational schema.
 
 ### 📝 Logical Design (Sketching):
 We performed manual sketching to architect the Dimension tables, ensuring they meet the analytical needs of the stakeholders:
 
 <p align="center">
-  <img src="Sprint%202/Sketching/Shift%20Sketching.jpeg" width="30%" />
-  <img src="Sprint%202/Sketching/sketching%20of%20departement.jpeg" width="30%" />
-  <img src="Sprint%202/Sketching/status%20dim%20sketching.jpeg" width="30%" />
+  <img src="Sprint%202/Sketching/Shift%20Sketching.jpeg" width="31%" />
+  <img src="Sprint%202/Sketching/sketching%20of%20departement.jpeg" width="31%" />
+  <img src="Sprint%202/Sketching/status%20dim%20sketching.jpeg" width="31%" />
 </p>
 
 ### ⚙️ Data Processing:
