@@ -32,9 +32,9 @@ In this stage, we focused on translating business requirements into a robust rel
 We performed manual sketching to architect the Dimension tables, ensuring they meet the analytical needs of the stakeholders:
 
 <p align="center">
-  <img src="Sprint%202/Sketching/Shift%20Sketching.jpeg" width="31%" />
-  <img src="Sprint%202/Sketching/sketching%20of%20departement.jpeg" width="31%" />
-  <img src="Sprint%202/Sketching/status%20dim%20sketching.jpeg" width="31%" />
+  <img src="Sprint 2 /Sketching/Shift Sketching.jpeg" width="31%" />
+  <img src="Sprint 2 /Sketching/sketching of departement.jpeg" width="31%" />
+  <img src="Sprint 2 /Sketching/status dim sketching.jpeg" width="31%" />
 </p>
 
 ### 📈 Analytical Layer (Gold):
