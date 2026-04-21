@@ -9,7 +9,7 @@
 ---
 
 ## 🏗️ Technical Architecture
-The infrastructure follows the **Multi-Hop (Medallion) pattern** to ensure data integrity and high performance:
+The infrastructure follows the **Multi-Hop (Medallion) pattern** to ensure data integrity:
 
 <p align="center">
   <img src="Data%20Engineering%20Architecture/Cx_Diagram.jpg" width="900" alt="Architecture Diagram">
@@ -18,7 +18,6 @@ The infrastructure follows the **Multi-Hop (Medallion) pattern** to ensure data 
 ---
 
 ## 🛠️ Technology Stack & Resources
-Detailed view of the Azure environment and storage hierarchy:
 <p align="center">
   <img src="Data%20Engineering%20Architecture/Azure%20Resources.jpg" width="48%" />
   <img src="Data%20Engineering%20Architecture/Data_Lake_Containers.jpg" width="48%" />
@@ -38,24 +37,11 @@ We performed manual sketching to architect the Dimension tables, ensuring they m
   <img src="Sprint%202/Sketching/status%20dim%20sketching.jpeg" width="31%" />
 </p>
 
-### ⚙️ Data Processing:
-We leveraged **Azure Synapse** for heavy lifting, data cleansing, and optimization:
-<p align="center">
-  <img src="Data%20Engineering%20Architecture/Azure%20Synapse.jpg" width="80%" />
-</p>
-
 ### 📈 Analytical Layer (Gold):
 Final curated views are served directly to Power BI for real-time reporting:
 <p align="center">
   <img src="Data%20Engineering%20Architecture/Synapse_Views_in_PBI.jpg" width="750">
 </p>
-
----
-
-## 🚀 Key Quantifiable Achievements
-* **40% Storage Cost Reduction:** Achieved by implementing Snappy compression via Parquet files.
-* **2x Faster Query Response:** Columnar storage optimization reduced I/O overhead.
-* **80% Reduction in Manual Reporting:** ETL automation eliminated manual data prep.
 
 ---
 
