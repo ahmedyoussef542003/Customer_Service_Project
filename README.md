@@ -33,7 +33,7 @@ The infrastructure follows the **Multi-Hop (Medallion) pattern** to provide a cl
 * **Cloud Platform:** Microsoft Azure
 * **Data Orchestration:** Azure Data Factory (ADF)
 * **Data Lake:** ADLS Gen2
-* **Data Warehousing:** Azure Synapse Analytics (Serverless SQL Pools)
+* **Data Warehouse:** Azure Synapse Analytics (Serverless SQL Pools)
 * **Data Visualization:** Power BI Desktop & Service
 * **Version Control:** GitHub
 
@@ -81,7 +81,7 @@ This project was successfully delivered through the collaborative efforts of:
 
 ### Project Contribution Graph
 <p align="center">
-  <img src="https://path-to-your-contributors-image.png" width="850" alt="Contributors Activity">
+  <img src="Customer_Service_Project/Data%20Engineering%20Architecture/contributors_activity.png" width="850" alt="Contributors Activity">
 </p>
 
 ---
