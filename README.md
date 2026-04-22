@@ -73,6 +73,31 @@ The core of **SynapSupport** lies in its ability to decouple data storage from c
   <i>Figure 1: Comprehensive End-to-End Azure Data Pipeline Architecture</i>
 </p>
 
+---
+
+## 📈 Analytical Insights (Power BI Pages)
+The final stage of our pipeline delivers granular insights through a multi-page interactive dashboard. Each page is designed to serve a specific business vertical:
+
+### 1️⃣ Strategic Overviews
+<p align="center">
+  <img src="Data Engineering Architecture/2nd_Page_Customer_Analysis.jpg" width="48%" />
+  <img src="Data Engineering Architecture/7th_Page_Department.jpg" width="48%" />
+</p>
+
+### 2️⃣ Operational Performance
+<p align="center">
+  <img src="Data Engineering Architecture/3rd_Page_Agent_Analysis.jpg" width="48%" />
+  <img src="Data Engineering Architecture/6th_Page_Shift_Performence.jpg" width="48%" />
+</p>
+
+### 3️⃣ Quality & SLA Tracking
+<p align="center">
+  <img src="Data Engineering Architecture/4Th_Page_Issues.jpg" width="48%" />
+  <img src="Data Engineering Architecture/5th_Page_SLA_Branch.jpg" width="48%" />
+</p>
+
+---
+
 ### Key Strategic Benefits:
 * **Data Reliability:** We maintain a "Single Source of Truth" in the Bronze layer for auditing and reprocessing.
 * **Cost Optimization:** Using **Parquet** files and **Serverless SQL** ensures we only pay for the data we query.
