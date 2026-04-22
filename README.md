@@ -25,7 +25,7 @@ The infrastructure follows the **Multi-Hop (Medallion) pattern** to ensure data 
 
 ---
 
-## 📂 Sprint 2: Logical Modeling & Transformation
+## 📂 Logical Modeling & Transformation
 In this stage, we focused on translating business requirements into a robust relational schema.
 
 ### 📝 Logical Design (Sketching):
